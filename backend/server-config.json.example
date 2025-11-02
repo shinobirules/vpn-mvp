@@ -1,0 +1,10 @@
+{
+  "server": {
+    "name": "Demo VPN Server",
+    "country": "United States",
+    "ip": "YOUR_SERVER_IP_HERE",
+    "publicKey": "YOUR_SERVER_PUBLIC_KEY_HERE",
+    "port": 51820,
+    "allowedIPs": "0.0.0.0/0"
+  }
+}

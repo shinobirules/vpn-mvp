@@ -1,0 +1,9 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "demo@vpn.com",
+      "password": "GENERATE_BCRYPT_HASH_WITH_generate-password.js"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "vpn-mvp-app",
+  "version": "1.0.0",
+  "description": "VPN MVP Electron Desktop Application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev"
+  },
+  "keywords": ["vpn", "wireguard", "electron", "desktop"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "electron": "^27.0.0"
+  }
+}

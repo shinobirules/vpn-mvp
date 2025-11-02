@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VPN MVP</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Login Screen -->
+  <div id="login-screen" class="screen">
+    <div class="card">
+      <h1 class="title">VPN Login</h1>
+      <p class="subtitle">Enter your credentials to continue</p>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input 
+          type="email" 
+          id="email" 
+          placeholder="demo@vpn.com"
+          autocomplete="email"
+        >
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          placeholder="Enter your password"
+          autocomplete="current-password"
+        >
+      </div>
+      
+      <div id="error-msg" class="error-message" style="display: none;"></div>
+      
+      <button id="login-btn" class="btn btn-primary">
+        Login
+      </button>
+      
+      <p class="hint">
+        Demo credentials: demo@vpn.com / password123
+      </p>
+    </div>
+  </div>
+
+  <!-- Main Screen -->
+  <div id="main-screen" class="screen" style="display: none;">
+    <div class="card">
+      <h1 class="title">VPN Status</h1>
+      
+      <div id="status" class="status-container">
+        <div class="status-indicator">
+          <div id="status-dot" class="status-dot disconnected"></div>
+          <span id="connection-status" class="status-text">Disconnected</span>
+        </div>
+        
+        <div class="server-info">
+          <p class="server-label">Server:</p>
+          <p id="server-name" class="server-name">Loading...</p>
+          <p id="server-country" class="server-country"></p>
+        </div>
+      </div>
+      
+      <div id="connection-error" class="error-message" style="display: none;"></div>
+      
+      <div class="button-group">
+        <button id="connect-btn" class="btn btn-primary btn-large">
+          Connect
+        </button>
+        
+        <button id="disconnect-btn" class="btn btn-danger btn-large" style="display: none;">
+          Disconnect
+        </button>
+      </div>
+      
+      <button id="logout-btn" class="btn btn-secondary btn-small">
+        Logout
+      </button>
+      
+      <div class="footer">
+        <p class="footer-text">VPN MVP v1.0.0</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
