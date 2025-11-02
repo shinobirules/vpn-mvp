@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  backend:
+    name: Backend (Node 18)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install backend dependencies
+        working-directory: backend
+        run: |
+          npm install
+
+      - name: Sanity check backend files
+        working-directory: backend
+        run: |
+          node -e "require('fs').accessSync('index.js')"
+          node -e "console.log('Backend OK')"
+
+  app:
+    name: Electron App (Node 18)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install app dependencies
+        working-directory: app
+        run: |
+          npm install
+
+      - name: Sanity check app files
+        working-directory: app
+        run: |
+          node -e "require('fs').accessSync('main.js')"
+          node -e "console.log('App OK')"

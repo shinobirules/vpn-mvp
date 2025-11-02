@@ -1,5 +1,7 @@
 # VPN MVP - Minimal Viable Product
 
+[![CI](https://github.com/shinobirules/vpn-mvp/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/shinobirules/vpn-mvp/actions/workflows/ci.yml)
+
 A simplified VPN application built with Electron and Node.js, featuring WireGuard integration for secure VPN connections.
 
 ## 🎯 Project Overview
@@ -409,5 +411,6 @@ For issues or questions:
 ---
 
 **Built with ❤️ using Electron, Node.js, and WireGuard**
-#   y e s - v p n  
+#   y e s - v p n 
+ 
  
